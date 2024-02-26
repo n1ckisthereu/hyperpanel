@@ -5241,6 +5241,8 @@ __metadata:
     karma-coverage: "npm:~2.2.0"
     karma-jasmine: "npm:~5.1.0"
     karma-jasmine-html-reporter: "npm:~2.1.0"
+    primeflex: "npm:^3.3.1"
+    primeng: "npm:^17.8.0"
     rxjs: "npm:~7.8.0"
     tslib: "npm:^2.3.0"
     typescript: "npm:~5.2.2"
@@ -7109,6 +7111,28 @@ __metadata:
   version: 5.6.0
   resolution: "pretty-bytes@npm:5.6.0"
   checksum: 10c0/f69f494dcc1adda98dbe0e4a36d301e8be8ff99bfde7a637b2ee2820e7cb583b0fc0f3a63b0e3752c01501185a5cf38602c7be60da41bdf84ef5b70e89c370f3
+  languageName: node
+  linkType: hard
+
+"primeflex@npm:^3.3.1":
+  version: 3.3.1
+  resolution: "primeflex@npm:3.3.1"
+  checksum: 10c0/6ab3e8fca36b2d0e1dfe7bfde2d80570f12ff6d8fbd43fe427e0dba29dfd4fe96b91a7b78c22023f01d142b11741811d9a2810e1e32c23c5da64a1462f66705b
+  languageName: node
+  linkType: hard
+
+"primeng@npm:^17.8.0":
+  version: 17.8.0
+  resolution: "primeng@npm:17.8.0"
+  dependencies:
+    tslib: "npm:^2.3.0"
+  peerDependencies:
+    "@angular/common": ^17.0.0
+    "@angular/core": ^17.0.0
+    "@angular/forms": ^17.0.0
+    rxjs: ^6.0.0 || ^7.8.1
+    zone.js: ~0.14.0
+  checksum: 10c0/5cfad78b85c70673a2602b52d59249c38ccec698126f6796add6fdd90efa63f9ef5f5874ea07c2229bba58ab297422d62ea587fe7ada24ada0220de9d4f5eb90
   languageName: node
   linkType: hard
 
