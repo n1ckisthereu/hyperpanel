@@ -1,16 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 250 250" style="enable-background:new 0 0 250 250;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#DD0031;}
-	.st1{fill:#C3002F;}
-	.st2{fill:#FFFFFF;}
-</style>
-<g>
-	<polygon class="st0" points="125,30 125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 125,230 203.9,186.3 218.1,63.2 	"/>
-	<polygon class="st1" points="125,30 125,52.2 125,52.1 125,153.4 125,153.4 125,230 125,230 203.9,186.3 218.1,63.2 125,30 	"/>
-	<path class="st2" d="M125,52.1L66.8,182.6h0h21.7h0l11.7-29.2h49.4l11.7,29.2h0h21.7h0L125,52.1L125,52.1L125,52.1L125,52.1
-		L125,52.1z M142,135.4H108l17-40.9L142,135.4z"/>
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_270_65" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="3" y="1" width="93" height="98">
+<path d="M3 1H96V99H3V1Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_270_65)">
+<path d="M95.6151 17.2746L92.2708 69.5647L60.2959 1L95.6151 17.2746ZM73.4681 84.8884L49.3077 98.6151L25.1469 84.8884L30.0609 73.0304H68.5542L73.4681 84.8884ZM49.3077 27.0261L61.9678 57.6731H36.6472L49.3077 27.0261ZM6.31005 69.5647L3 17.2746L38.3191 1L6.31005 69.5647Z" fill="url(#paint0_linear_270_65)"/>
+<path d="M95.6151 17.2746L92.2708 69.5647L60.2959 1L95.6151 17.2746ZM73.4681 84.8884L49.3077 98.6151L25.1469 84.8884L30.0609 73.0304H68.5542L73.4681 84.8884ZM49.3077 27.0261L61.9678 57.6731H36.6472L49.3077 27.0261ZM6.31005 69.5647L3 17.2746L38.3191 1L6.31005 69.5647Z" fill="url(#paint1_linear_270_65)"/>
 </g>
+<defs>
+<linearGradient id="paint0_linear_270_65" x1="23.4387" y1="89.7606" x2="97.0629" y2="54.6226" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E40035"/>
+<stop offset="0.24" stop-color="#F60A48"/>
+<stop offset="0.352" stop-color="#F20755"/>
+<stop offset="0.494" stop-color="#DC087D"/>
+<stop offset="0.745" stop-color="#9717E7"/>
+<stop offset="1" stop-color="#6C00F5"/>
+</linearGradient>
+<linearGradient id="paint1_linear_270_65" x1="20.1091" y1="12.77" x2="68.1332" y2="67.7879" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF31D9"/>
+<stop offset="1" stop-color="#FF5BE1" stop-opacity="0"/>
+</linearGradient>
+</defs>
 </svg>

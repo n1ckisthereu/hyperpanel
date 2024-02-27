@@ -1,0 +1,33 @@
+<p-sidebar
+  [modal]="false"
+  [visible]="true"
+  styleClass="w-6rem flex justify-content-center "
+  [showCloseIcon]="false"
+>
+  <ng-template pTemplate="header">
+    <img
+      src="/assets/angular.svg"
+      width="54"
+      class="flex justify-content-center"
+    />
+  </ng-template>
+
+  <ng-template pTemplate="content">
+    @for (link of navLinks; track link.route) {
+      <a
+        [routerLink]="[link.route]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: link.exact! }"
+        pButton
+        [icon]="link.icon"
+        class="flex gap-2 no-underline text-left p-button-text"
+      >
+        <ng-icon [name]="link.icon"></ng-icon>
+      </a>
+    }
+  </ng-template>
+</p-sidebar>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

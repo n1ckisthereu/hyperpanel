@@ -1,0 +1,12 @@
+@import "primeng/resources/themes/lara-dark-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeflex/primeflex.css";
+
+.p-sidebar .p-sidebar-header + .p-sidebar-content {
+  display: flex;
+  gap: 26px;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 6px;
+  margin-top: 20px;
+}
