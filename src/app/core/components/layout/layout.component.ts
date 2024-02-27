@@ -7,8 +7,8 @@ import { NgIconComponent, provideIcons } from "@ng-icons/core";
 import {
   remixSignalWifi2Fill,
   remixFilePaper2Fill,
-  remixSoundModuleFill,
   remixHomeGearLine,
+  remixCustomerServiceFill,
 } from "@ng-icons/remixicon";
 
 import { NavLink } from "../../models/navlink";
@@ -22,7 +22,7 @@ import { NavLink } from "../../models/navlink";
     provideIcons({
       remixSignalWifi2Fill,
       remixFilePaper2Fill,
-      remixSoundModuleFill,
+      remixCustomerServiceFill,
       remixHomeGearLine,
     }),
   ],
@@ -48,7 +48,7 @@ export class LayoutComponent {
     },
     {
       tooltip: "Audio",
-      icon: "remixSoundModuleFill",
+      icon: "remixCustomerServiceFill",
       route: "audio",
     },
   ];

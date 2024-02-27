@@ -1,17 +1,14 @@
 :host {
-  display: flex;
-
   a {
+    cursor: default;
     &.active {
       background-color: var(--primary-color);
       color: var(--primary-color-text);
     }
-
     &:hover:not(.active) {
-      background-color: var(--primary-50);
+      background-color: var(--primary-900);
     }
   }
-
   main {
     margin-left: 105px;
   }
