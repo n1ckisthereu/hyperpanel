@@ -19,14 +19,17 @@ import { convertFileSrc } from "@tauri-apps/api/tauri";
 export class AppComponent implements OnInit {
   async mounted() {
     const config_dir = await appConfigDir();
+    const timestamp = new Date().getTime();
 
-    console.log("mounted");
     //await listen("theme-changed", () => {
     const element = document.getElementById(
       "style-injector",
     ) as HTMLLinkElement;
-    element.href = "";
-    element.href = convertFileSrc(config_dir + "style/hyperpanel.css");
+
+    element.href =
+      convertFileSrc(config_dir + "style/hyperpanel.css") +
+      "?timestamp=" +
+      timestamp;
   }
 
   async ngOnInit() {
