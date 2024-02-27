@@ -1,6 +1,7 @@
 <p-sidebar
+  [modal]="false"
   [visible]="true"
-  styleClass="w-6rem flex justify-content-center"
+  styleClass="w-6rem flex justify-content-center "
   [showCloseIcon]="false"
 >
   <ng-template pTemplate="header">
@@ -13,13 +14,20 @@
 
   <ng-template pTemplate="content">
     @for (link of navLinks; track link.route) {
-      <p-button styleClass="cursor-auto">
-        <ng-template pTemplate="icon">
-          <ng-icon [name]="link.icon"></ng-icon>
-        </ng-template>
-      </p-button>
+      <a
+        [routerLink]="[link.route]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: link.exact! }"
+        pButton
+        [icon]="link.icon"
+        class="flex gap-2 no-underline text-left p-button-text cursor-auto"
+      >
+        <ng-icon [name]="link.icon"></ng-icon>
+      </a>
     }
   </ng-template>
 </p-sidebar>
 
-<router-outlet></router-outlet>
+<main>
+  <router-outlet></router-outlet>
+</main>
