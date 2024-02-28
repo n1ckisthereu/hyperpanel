@@ -6,7 +6,7 @@ import { SidebarModule } from "primeng/sidebar";
 import { NgIconComponent, provideIcons } from "@ng-icons/core";
 import {
   remixSignalWifi2Fill,
-  remixFilePaper2Fill,
+  remixPaintFill,
   remixHomeGearLine,
   remixCustomerServiceFill,
 } from "@ng-icons/remixicon";
@@ -21,9 +21,9 @@ import { NavLink } from "../../models/navlink";
   viewProviders: [
     provideIcons({
       remixSignalWifi2Fill,
-      remixFilePaper2Fill,
       remixCustomerServiceFill,
       remixHomeGearLine,
+      remixPaintFill,
     }),
   ],
   imports: [RouterModule, SidebarModule, ButtonModule, NgIconComponent],
@@ -43,7 +43,7 @@ export class LayoutComponent {
     },
     {
       tooltip: "Theme",
-      icon: "remixFilePaper2Fill",
+      icon: "remixPaintFill",
       route: "theme",
     },
     {

@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { CommonModule } from "@angular/common";
+import { Component } from "@angular/core";
+
+import { ImageModule } from "primeng/image";
+import { DividerModule } from "primeng/divider";
 
 @Component({
-  selector: 'app-theme',
   standalone: true,
-  imports: [],
-  templateUrl: './theme.component.html',
-  styleUrl: './theme.component.css'
+  selector: "app-theme",
+  templateUrl: "./theme.component.html",
+  imports: [CommonModule, ImageModule, DividerModule],
 })
-export class ThemeComponent {
-
-}
+export class ThemeComponent {}
