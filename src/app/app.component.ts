@@ -6,7 +6,7 @@ import { ButtonModule } from "primeng/button";
 
 // import { listen } from "@tauri-apps/api/event";
 import { appConfigDir } from "@tauri-apps/api/path";
-import { convertFileSrc } from "@tauri-apps/api/tauri";
+import { convertFileSrc, invoke } from "@tauri-apps/api/tauri";
 
 @Component({
   standalone: true,
@@ -30,6 +30,8 @@ export class AppComponent implements OnInit {
       convertFileSrc(config_dir + "style/hyperpanel.css") +
       "?timestamp=" +
       timestamp;
+
+    invoke("get_pictures");
   }
 
   async ngOnInit() {
