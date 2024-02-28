@@ -1,4 +1,4 @@
 #[tauri::command]
 pub fn get_pictures() {
-    return;
+    println!("I was invoked from JS!");
 }
