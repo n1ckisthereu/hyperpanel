@@ -24,7 +24,7 @@ fn list_images_path(directory_path: &Path) -> Vec<PathBuf> {
         })
         .collect();
 
-    // Ordenar os caminhos dos arquivos de imagem
+    // Ordenate the file paths for files of images
     images_paths.sort_by(|a, b| {
         let a_name = a.file_name().unwrap().to_string_lossy();
         let b_name = b.file_name().unwrap().to_string_lossy();
@@ -45,8 +45,5 @@ pub fn get_pictures() {
     if let Some(mut picture_dir) = picture_dir() {
         picture_dir.push("Wallpapers");
         let images_paths = list_images_path(&picture_dir);
-        for path in &images_paths {
-            println!("{}", path.to_string_lossy());
-        }
     }
 }
