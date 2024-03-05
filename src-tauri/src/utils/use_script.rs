@@ -32,7 +32,7 @@ pub fn save_plugin_info(app: &mut App, plugin_infos: &[PluginInfo]) {
 }
 
 pub fn list_available_scripts(app: &mut App) {
-    let mut plugin_infos = Vec::new(); // Criando um vetor para armazenar as informações do plugin
+    let mut plugin_infos = Vec::new(); // Creating a vtor for store plugin info
 
     if let Some(config_dir) = app.path_resolver().app_config_dir() {
         let plugins_dir = config_dir.join("plugins");
@@ -45,24 +45,25 @@ pub fn list_available_scripts(app: &mut App) {
                 if let Ok(metadata) = entry.metadata() {
                     if metadata.is_dir() {
                         if let Some(folder_name) = entry.file_name().to_str() {
-                            let plugin_name = folder_name.to_string(); // Nome do plugin é o nome da pasta
-                            let plugin_path = entry.path().display().to_string(); // Caminho completo da pasta do plugin
-
-                            // Procurar por qualquer arquivo dentro da pasta do plugin que contenha o nome do plugin
+                            let plugin_name = folder_name.to_string(); // Plugin name is the folder name 
+                            let plugin_path = entry.path().display().to_string(); // Full path to plugin folder
+                            // Search by anyone file in the plugins folder with contains the plugin name
                             if let Ok(files) = fs::read_dir(entry.path()) {
                                 for file in files.flatten() {
                                     if let Some(file_name) = file.file_name().to_str() {
                                         if file_name.contains(&plugin_name) {
-                                            // Construir o caminho do script correspondente ao plugin
+                                            // Build the file path to script match of plugin
                                             let script_path = file.path().display().to_string();
 
-                                            // Adicionando as informações do plugin à lista de PluginInfo
+                                            // Add the infos of plugin to PluginInfo list
                                             plugin_infos.push(PluginInfo {
                                                 plugin_name: plugin_name.clone(),
                                                 plugin_path: script_path.clone(),
                                             });
 
-                                            // Você deve substituir a string "loaded" pelo estado real do plugin
+                                            // I need replace the loaded string to test results of
+                                            // your plugin
+                                            
                                             table.add_row(Row::new(vec![
                                                 Cell::new(&plugin_name),
                                                 Cell::new("✅"),
@@ -79,13 +80,15 @@ pub fn list_available_scripts(app: &mut App) {
             table.printstd();
         } else {
             eprintln!("Failed to read directory: {}", plugins_dir.display());
-            return; // Se falhar, retorne da função para evitar salvar um arquivo vazio
+            return; // If fail, return of function to evite save empty file
         }
     } else {
         println!("Config directory not found");
-        return; // Se não encontrar o diretório de configuração, retorne da função para evitar salvar um arquivo vazio
+       
+        return; // If not find the config directory, return to avoid save empty file
     }
 
-    // Salvar informações do plugin como arquivo JSON
+    
+    // Save plugin info of files how JSON file
     save_plugin_info(app, &plugin_infos);
 }
