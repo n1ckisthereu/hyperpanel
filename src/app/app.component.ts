@@ -4,9 +4,8 @@ import { RouterOutlet } from "@angular/router";
 
 import { ButtonModule } from "primeng/button";
 
-// import { listen } from "@tauri-apps/api/event";
 import { appConfigDir } from "@tauri-apps/api/path";
-import { convertFileSrc, invoke } from "@tauri-apps/api/tauri";
+import { convertFileSrc } from "@tauri-apps/api/tauri";
 
 @Component({
   standalone: true,
@@ -30,10 +29,6 @@ export class AppComponent implements OnInit {
       convertFileSrc(config_dir + "style/hyperpanel.css") +
       "?timestamp=" +
       timestamp;
-
-    invoke("run", { pname: "hyprc", command: "get_infos" }).then((message) =>
-      console.log(message),
-    );
   }
 
   async ngOnInit() {
