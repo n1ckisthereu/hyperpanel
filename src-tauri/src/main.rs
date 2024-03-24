@@ -8,6 +8,7 @@ mod services;
 mod startup;
 mod utils;
 
+use services::run_service::run;
 use services::theme_service::get_infos_service;
 use startup::startup;
 use tauri::{generate_handler, App};
@@ -18,7 +19,7 @@ fn main() {
             startup(app);
             Ok(())
         })
-        .invoke_handler(generate_handler![get_infos_service])
+        .invoke_handler(generate_handler![get_infos_service, run])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

@@ -30,6 +30,10 @@ export class AppComponent implements OnInit {
       convertFileSrc(config_dir + "style/hyperpanel.css") +
       "?timestamp=" +
       timestamp;
+
+    invoke("run", { pname: "hyprc", command: "get_infos" }).then((message) =>
+      console.log(message),
+    );
   }
 
   async ngOnInit() {
