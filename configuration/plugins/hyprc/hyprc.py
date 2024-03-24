@@ -45,9 +45,9 @@ def get_infos():
                 "color_scheme": [
                     wal["special"]["background"],
                     wal["special"]["foreground"],
-                    wal["special"]["cursor"],
-                    wal["colors"]["color1"],
-                    wal["colors"]["color2"],
+                    wal["colors"]["color5"],
+                    wal["colors"]["color12"],
+                    wal["colors"]["color7"],
                     wal["colors"]["color10"],
                 ],
                 "pictures": get_pictures(),

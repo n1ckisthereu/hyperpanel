@@ -39,7 +39,7 @@ export class ThemeComponent implements OnInit {
   ngOnInit() {
     this.themeService.getThemeInfos().subscribe({
       next: (info) => {
-        console.log(info);
+        this.color_scheme = info.color_scheme;
         this.currentWallpaper = convertFileSrc(info.current_wallpaper);
         info.pictures.forEach((picture) => {
           this.pictures.push(convertFileSrc(picture));

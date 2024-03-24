@@ -8,15 +8,15 @@
       imageClass="border-round-lg"
     ></p-image>
     <div
-      class="bg-transparent h-2rem absolute flex"
+      class="bg-transparent h-2rem absolute flex shadow-8"
       [style]="{ width: '600px', bottom: '16px' }"
     >
-      @for (color of color_scheme; track color) {}
-      <div [style]="{ width: '100px' }" class="bg-red-500 h-2rem"></div>
-      <div [style]="{ width: '100px' }" class="bg-yellow-500 h-2rem"></div>
-      <div [style]="{ width: '100px' }" class="bg-green-500 h-2rem"></div>
-      <div [style]="{ width: '100px' }" class="bg-teal-500 h-2rem"></div>
-      <div [style]="{ width: '100px' }" class="bg-pink-500 h-2rem"></div>
+      @for (color of color_scheme; track color) {
+        <div
+          [style]="{ width: '100px', 'background-color': color }"
+          class="h-2rem"
+        ></div>
+      }
     </div>
   </div>
 
