@@ -3,11 +3,12 @@
 
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 mod events;
+mod global_vars;
 mod services;
 mod startup;
 mod utils;
 
-use services::theme_service::get_pictures;
+use services::theme_service::get_infos_service;
 use startup::startup;
 use tauri::{generate_handler, App};
 
@@ -17,7 +18,7 @@ fn main() {
             startup(app);
             Ok(())
         })
-        .invoke_handler(generate_handler![get_pictures])
+        .invoke_handler(generate_handler![get_infos_service])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

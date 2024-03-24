@@ -1215,6 +1215,7 @@ name = "hyperpanel"
 version = "0.0.0"
 dependencies = [
  "notify",
+ "once_cell",
  "prettytable",
  "serde",
  "serde_json",

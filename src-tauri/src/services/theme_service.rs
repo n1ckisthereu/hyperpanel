@@ -1,3 +1,4 @@
+use crate::utils::use_script::run_script;
 use std::fs;
 use std::path::{Path, PathBuf};
 use tauri::api::path::picture_dir;
@@ -41,9 +42,6 @@ fn extract_number(s: &str) -> usize {
 }
 
 #[tauri::command]
-pub fn get_pictures() {
-    if let Some(mut picture_dir) = picture_dir() {
-        picture_dir.push("Wallpapers");
-        let images_paths = list_images_path(&picture_dir);
-    }
+pub fn get_infos_service() -> String {
+    run_script("hyprc", "get_infos").unwrap().into()
 }

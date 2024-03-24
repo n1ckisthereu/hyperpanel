@@ -30,8 +30,6 @@ export class AppComponent implements OnInit {
       convertFileSrc(config_dir + "style/hyperpanel.css") +
       "?timestamp=" +
       timestamp;
-
-    invoke("get_pictures");
   }
 
   async ngOnInit() {

@@ -10,7 +10,10 @@ pub fn run_command(command: &str) -> String {
     };
 
     if output.status.success() {
-        String::from_utf8_lossy(&output.stdout).to_string()
+        // Remove extra chars from output
+        let mut result = String::from_utf8_lossy(&output.stdout).to_string();
+        result.retain(|c| !c.is_control()); // Remove control characters
+        result.trim().to_string() // Remove blank spaces on start and end
     } else {
         eprintln!(
             "Command failed with error: {}",
