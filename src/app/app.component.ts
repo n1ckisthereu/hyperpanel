@@ -4,7 +4,6 @@ import { RouterOutlet } from "@angular/router";
 
 import { ButtonModule } from "primeng/button";
 
-// import { listen } from "@tauri-apps/api/event";
 import { appConfigDir } from "@tauri-apps/api/path";
 import { convertFileSrc } from "@tauri-apps/api/tauri";
 

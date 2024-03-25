@@ -1,1 +1,43 @@
-<p>theme works!</p>
+<main>
+  <h1>Wallpaper</h1>
+  <div class="flex justify-content-center relative">
+    <p-image
+      [src]="currentWallpaper"
+      alt="Image"
+      width="600"
+      imageClass="border-round-lg"
+    ></p-image>
+    <div
+      class="bg-transparent h-2rem absolute flex shadow-8"
+      [style]="{ width: '600px', bottom: '16px' }"
+    >
+      @for (color of color_scheme; track color) {
+        <div
+          [style]="{ width: '100px', 'background-color': color }"
+          class="h-2rem"
+        ></div>
+      }
+    </div>
+  </div>
+
+  <p-button
+    label="Apply"
+    styleClass="p-button p-button-success gap-1 fixed z-3"
+    [style]="{ bottom: '28px', right: '34px' }"
+  >
+    <ng-icon name="remixCheckFill" class="text-lg"></ng-icon>
+  </p-button>
+  <p-divider></p-divider>
+  <div
+    class="flex justify-content-center gap-4 flex-wrap mt-6 max-h-22rem overflow-y-scroll mx-4"
+  >
+    @for (picture of pictures; track picture) {
+      <p-image
+        [src]="picture"
+        alt="Image"
+        width="200"
+        imageClass="border-round-sm"
+      ></p-image>
+    }
+  </div>
+</main>
