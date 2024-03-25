@@ -1,3 +1,9 @@
+#SukoOs Panel
+
+SukoOs Configuration Panel, learn more in:
+
+[SukoOs](https://github.com/n1ckisthereu/SukoOS)
+
 # Tauri + Angular
 
 This template should help get you started developing with Tauri and Angular.
